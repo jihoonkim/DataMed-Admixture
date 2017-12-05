@@ -39,12 +39,15 @@ unzip plink-1.07-x86_64.zip
 ln -s /opt/plink-1.07-x86_64/plink /usr/local/bin/plink 
 
 ### download resource data, the population allele frequencies for common SNPs
-###  of the International HapMap and 1000 Genomes Projects
+###  of the International HapMap Project
 cd /opt/ancestry
 wget "https://ndownloader.figshare.com/files/9920605" -O hapmap3.8populations.hg19.txt.zip
 unzip hapmap3.8populations.hg19.txt.zip
 rm hapmap3.8populations.hg19.txt.zip
 
+### download resource data, the population allele frequencies for common SNPs
+###  of the 1000 Genomes Project
+cd /opt/ancestry
 wget "https://ndownloader.figshare.com/files/9920560" -O 1000Gphase3.5superpopulations.hg19.txt.zip
 unzip 1000Gphase3.5superpopulations.hg19.txt.zip
 rm 1000Gphase3.5superpopulations.hg19.txt.zip
