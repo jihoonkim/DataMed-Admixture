@@ -32,6 +32,12 @@ cd vcftools
 make 
 make install
 
+### install PLINK
+cd /opt
+wget http://zzz.bwh.harvard.edu/plink/dist/plink-1.07-x86_64.zip
+unzip plink-1.07-x86_64.zip
+ln -s /opt/plink-1.07-x86_64/plink /usr/local/bin/plink 
+
 ### download resource data, the population allele frequencies for common SNPs
 ###  of the International HapMap and 1000 Genomes Projects
 cd /opt/ancestry
