@@ -38,6 +38,6 @@ grep -w "final maxval" ${OUTPUT_DIR}/*.input.ancestry | \
   cut -d ' ' -f1,2,3,5,7,9,11,13,15,17  >> ${OUTPUT_DIR}/output_${PLINK_INPUT_PREFIX}.txt
 
 ### check the example run output.
-### 'run is success if md5 value of the first 10 lines is 0d718bff9e06ae2e9e9d4c9ffe9206d0
+### 'run is success if md5 value of the first 10 lines is 
 head -n 10 ${OUTPUT_DIR}/output_${PLINK_INPUT_PREFIX}.txt
 head -n 10 ${OUTPUT_DIR}/output_${PLINK_INPUT_PREFIX}.txt | md5sum 
