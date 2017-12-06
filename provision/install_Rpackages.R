@@ -1,0 +1,7 @@
+install.packages("dplyr")
+install.packages("entropy")
+install.packages("ggplot2")
+install.packages("ggtern")
+install.packages("plyr")
+install.packages("reshape2")
+install.packages("tidyr")
