@@ -11,8 +11,8 @@ WORKDIR /opt
 RUN apt-get update -y                                            && \
     apt-get install -y git                                       && \
     git clone https://github.com/jihoonkim/DataMed-Admixture.git && \
-    bash DataMed-Admixture/install_iadmix.sh                     && \
-    bash DataMed-Admixture/install_R.sh  
+    bash DataMed-Admixture/provision/install_iadmix.sh                     && \
+    bash DataMed-Admixture/provision/install_R.sh  
 
 ### change a working directory to /opt/ancestry
 WORKDIR /opt/ancestry
