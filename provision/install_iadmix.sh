@@ -13,14 +13,15 @@
 apt-get update -y 
 
 ### install dependent packages
-apt-get install -y  autoconf build-essential curl git g++ libncurses5-dev \
- libssl-dev make pkg-config software-properties-common python vim \
- wget zip zlibc zlib1g zlib1g-dev 
+apt-get install -y autoconf build-essential curl gcc-multilib git g++ \
+ libbz2-dev liblzma-dev libncurses5-dev libssl-dev libz-dev make pkg-config  \
+ software-properties-common python wget zip zlibc zlib1g zlib1g-dev 
 
 ### install iADMIX to compute population allele frequencies
 cd /opt 
 git clone https://github.com/vibansal/ancestry.git
 cd ancestry
+find . -type f -name '*.o' -delete. # recursively delete all *.o files 
 make all
 
 ### install vcftools to convert .vcf to PLINK format file
