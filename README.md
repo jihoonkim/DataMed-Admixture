@@ -4,7 +4,18 @@ DataMed Admixture
 ### Install Docker
 Download and install [Docker community edition](https://www.docker.com/community-edition)
 
-### Example Data
+
+### Input 
+- text goes here
+- text goes here
+
+
+### Output 
+- text goes here
+- text goes here
+
+
+### Example Input Data
 Rankinen et al. PLoS One 2016
 - No Evidence of a Common DNA Variant Profile Specific to World Class Endurance Athletes
 - [Article on PubMed](https://www.ncbi.nlm.nih.gov/pubmed/26824906)
