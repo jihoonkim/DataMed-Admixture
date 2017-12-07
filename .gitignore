@@ -1,6 +1,8 @@
 .DS_Store
 *.tmp
 *.log
+examplerun_hapmap3/
+examplerun_hapmap3/*
 temp.sh
 testout
 testout/*
