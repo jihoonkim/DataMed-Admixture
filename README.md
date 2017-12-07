@@ -7,8 +7,8 @@ Download and install [Docker community edition](https://www.docker.com/community
 ### Example Data
 Rankinen et al. PLoS One 2016
 - No Evidence of a Common DNA Variant Profile Specific to World Class Endurance Athletes
-- Article on PubMed](https://www.ncbi.nlm.nih.gov/pubmed/26824906)
-- Data on Figshare](https://figshare.com/articles/GAMES_discovery_data_sets/1619893)
+- [Article on PubMed](https://www.ncbi.nlm.nih.gov/pubmed/26824906)
+- [Data on Figshare](https://figshare.com/articles/GAMES_discovery_data_sets/1619893)
 
 ### Example run
 Commands to run an example run with a published data.
