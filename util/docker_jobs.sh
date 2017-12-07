@@ -1,5 +1,11 @@
+# clean up stopped containers:
+docker rm -v $(docker ps -a -q -f status=exited)
+
+# delete dangling images
+docker rmi $(docker images -q -f dangling=true)
+
 # build a docker container from Dockerfile
-docker build -t j5kim/datamed-admixture:v1 .
+docker build -t j5kim/datamed-admixture .
 
 # test run docker
 export MY_LOCAL_DIR=/Users/jihoonkim/Project/DataMed-Admixture/examplerun_hapmap3
