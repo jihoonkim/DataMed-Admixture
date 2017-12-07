@@ -21,7 +21,7 @@ apt-get install -y autoconf build-essential curl gcc-multilib git g++ \
 cd /opt 
 git clone https://github.com/vibansal/ancestry.git
 cd ancestry
-find . -type f -name '*.o' -delete. # recursively delete all *.o files 
+find . -type f -name '*.o' -delete # recursively delete all *.o files 
 make all
 
 ### install vcftools to convert .vcf to PLINK format file
