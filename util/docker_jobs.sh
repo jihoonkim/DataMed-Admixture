@@ -25,7 +25,6 @@ docker push j5kim/datamed-admixture
 # miscellaneous docker commands
 #--------------------------------------------------------------------------
 #docker tag 5kim/datamed-admixture j5kim/datamed-admixture:v1
-# docker run -t -i -v /Users/jihoonkim/Project/DataMed-Admixture/testrun_hapmap3:/testrun_hapmap3 ubuntu:16.04 /bin/bash
 
 # Actually clean up stopped containers:
 docker rm -v $(docker ps -a -q -f status=exited)
