@@ -9,7 +9,7 @@ docker build -t j5kim/datamed-admixture .
 
 # test run docker
 export MY_LOCAL_DIR=/Users/jihoonkim/Project/DataMed-Admixture/examplerun_hapmap3
-docker run -t -i -v ${MY_LOCAL_DIR}:/examplerun_hapmap3 j5kim/datamed-admixture:latest /opt/DataMed-Admixture/example/examplerun_hapmap3.sh
+docker run -t -i -v ${MY_LOCAL_DIR}:/examplerun_hapmap3 j5kim/datamed-admixture:latest bash /opt/DataMed-Admixture/example/examplerun_hapmap3.sh
 
 # create an image from a container
 MY_DOCKER_TAG=$(docker ps -a -q | head -n 1)
