@@ -17,6 +17,10 @@ export RESOURCE_DATA=${iADMIX_DIR}/hapmap3.8populations.hg19.txt
 mkdir -p ${OUTPUT_DIR}
 
 ### download an example input data
+###  Rankinen et al. PLoS One 2016
+###  No Evidence of a Common DNA Variant Profile Specific to World Class Endurance Athletes
+###  https://www.ncbi.nlm.nih.gov/pubmed/26824906
+###  https://figshare.com/articles/GAMES_discovery_data_sets/1619893
 cd ${OUTPUT_DIR}
 wget "https://ndownloader.figshare.com/files/3573941" -O Jap_endurance_GWAS_Plos_One.zip
 unzip Jap_endurance_GWAS_Plos_One.zip
