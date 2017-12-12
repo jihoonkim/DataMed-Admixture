@@ -39,7 +39,7 @@ docker run -d -v ${MY_LOCAL_DIR}:/results j5kim/datamed-admixture:latest bash /o
 call hapmap3 based admixture on the example data by executing the following commands. 
 
 ```bash
-docker run -d -v ${MY_LOCAL_DIR}:/results j5kim/datamed-admixture:latest bash /opt/DataMed-Admixture/script/run_hapmap3.sh /results/rankinen
+docker run -d -v ${MY_LOCAL_DIR}:/results j5kim/datamed-admixture:latest bash /opt/DataMed-Admixture/scripts/run_hapmap3.sh /results/rankinen
 ```
 Above run is success if you see the 2 files output.rankinen.txt and output_summary_rankinen.txt
 
@@ -49,6 +49,6 @@ Provide your data in plink (cohortname.ped and cohortname.map) format and run th
 
 ```bash
 export MY_LOCAL_DIR="/usr/john/mydata"
-docker run -d -v ${MY_LOCAL_DIR}:/results j5kim/datamed-admixture:latest bash /opt/DataMed-Admixture/script/run_hapmap3.sh /results/cohortname
+docker run -d -v ${MY_LOCAL_DIR}:/results j5kim/datamed-admixture:latest bash /opt/DataMed-Admixture/scripts/run_hapmap3.sh /results/cohortname
 ```
 
