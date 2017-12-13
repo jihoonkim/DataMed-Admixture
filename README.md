@@ -6,7 +6,7 @@ Download and install [Docker community edition](https://www.docker.com/community
 
 
 ### Input 
-Input files are genotypes in plink text format ({cohortname}.ped and {cohortname}.map). Please see [plink](http://zzz.bwh.harvard.edu/plink/) documentation to obtain such files. 
+Input files are genotypes in plink text format (cohortname.ped and cohortname.map). Please refer to [plink](http://zzz.bwh.harvard.edu/plink/) or [plink 1.9](https://www.cog-genomics.org/plink/1.9/) documentation to obtain such files from other formats, including VCF formats 
 
 
 ### Output 
@@ -45,7 +45,7 @@ Above run is success if you see the 2 files output.rankinen.txt and output_summa
 
 ### Run
 
-Provide your data in plink (cohortname.ped and cohortname.map) format and run the following command to call admixture and diversity score from the Hapmap3 refernce. 
+Provide your data in plink (cohortname.ped and cohortname.map) format and run the following command to call admixture and diversity score from the Hapmap3 reference. 
 
 ```bash
 export MY_LOCAL_DIR="/usr/john/mydata"

@@ -36,5 +36,5 @@ grep -w "final maxval" ${OUTPUT_DIR}/*.input.ancestry | \
 Rscript ${iADMIX_DIR}/getDivScore.R ${OUTPUT_DIR}/output_${name}.txt > ${OUTPUT_DIR}/output_summary_${name}.txt 2>${OUTPUT_DIR}/R.log
 
 ### cleaning up
-rm ${OUTPUT_DIR}/${name}* 
+rm -rf ${OUTPUT_DIR}/${name}* 
 
