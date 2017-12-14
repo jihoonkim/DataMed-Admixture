@@ -10,6 +10,7 @@
 ### set run parameters
 export OUTPUT_DIR=/results 
 export iADMIX_DIR=/opt/ancestry
+export SCRIPTS_DIR=/opt/DataMed-Admixture/scripts
 export RESOURCE_DATA=${iADMIX_DIR}/hapmap3.8populations.hg19.txt
 
 ### create an output directory if not exists
@@ -30,11 +31,8 @@ grep -w "final maxval" ${OUTPUT_DIR}/*.input.ancestry | \
   awk -F ':' '{split($1,a,"."); print a[1],a[2], $3,$4,$5,$6,$7,$8,$9,$10}' | \
   cut -d ' ' -f1,2,3,5,7,9,11,13,15,17  >> ${OUTPUT_DIR}/output_${name}.txt
 
-
 ### calculate the diversity score for the cohort 
-
-Rscript ${iADMIX_DIR}/getDivScore.R ${OUTPUT_DIR}/output_${name}.txt > ${OUTPUT_DIR}/output_summary_${name}.txt 2>${OUTPUT_DIR}/R.log
+Rscript ${SCRIPTS_DIR}/getDivScore.R ${OUTPUT_DIR}/output_${name}.txt > ${OUTPUT_DIR}/output_summary_${name}.txt 2>${OUTPUT_DIR}/R.log
 
 ### cleaning up
 rm -rf ${OUTPUT_DIR}/${name}* 
-
