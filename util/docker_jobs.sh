@@ -14,10 +14,9 @@ docker rmi $(docker images -q -f dangling=true)
 # build a docker container from Dockerfile
 docker build -t j5kim/datamed-admixture .
 
-# prepare an example 
+# prepare a test-run
 export MY_LOCAL_DIR=/Users/jihoonkim/Project/DataMed-Admixture/testout
 docker run -d -v ${MY_LOCAL_DIR}:/results j5kim/datamed-admixture:latest bash /opt/DataMed-Admixture/example/prepare_example.sh
-
 
 # test run docker
 docker run -d -v ${MY_LOCAL_DIR}:/results j5kim/datamed-admixture:latest bash /opt/DataMed-Admixture/scripts/run_hapmap3.sh /results/rankinen
