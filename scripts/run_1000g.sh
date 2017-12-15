@@ -10,7 +10,7 @@
 ### set run parameters
 export OUTPUT_DIR=/results 
 export iADMIX_DIR=/opt/ancestry
-export RESOURCE_DATA=${iADMIX_DIR}/1000Gphase3.5superpopulations.hg19.txt
+export RESOURCE_DATA=${iADMIX_DIR}/1000Gphase3.5superpopulations.hg19.slice.txt
 
 ### create an output directory if not exists
 mkdir -p ${OUTPUT_DIR}
