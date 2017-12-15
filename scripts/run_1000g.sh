@@ -24,9 +24,9 @@ mkdir -p ${OUTPUT_DIR}
 name=`basename ${INPUT_DATA}`
 
 ### estimate the global admixture proportion of known reference populations
-#python ${iADMIX_DIR}/runancestry.py  --freq=${iADMIX_DIR}/slice.txt --cores=2 \
-#    --path=${iADMIX_DIR} --plink=${INPUT_DATA} \
-#    --out=${OUTPUT_DIR}/${name}
+python ${iADMIX_DIR}/runancestry.py  --freq=${iADMIX_DIR}/slice.txt --cores=2 \
+    --path=${iADMIX_DIR} --plink=${INPUT_DATA} \
+    --out=${OUTPUT_DIR}/${name}
 
 ### aggregate individual estimates into a single output file
 echo  -ne "reference sample " > ${OUTPUT_DIR}/output_${name}.txt
