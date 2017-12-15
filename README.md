@@ -6,7 +6,7 @@ Download and install [Docker community edition](https://www.docker.com/community
 
 
 ### Input 
-Input files are genotypes in plink text format (cohortname.ped and cohortname.map). Please refer to [plink](http://zzz.bwh.harvard.edu/plink/) or [plink 1.9](https://www.cog-genomics.org/plink/1.9/) documentation to obtain such files from other formats, including VCF formats 
+Input files are genotypes in plink text format (cohortname.ped and cohortname.map) and mapped to hg19/GRCh37 human reference genome. Please refer to [plink](http://zzz.bwh.harvard.edu/plink/) or [plink 1.9](https://www.cog-genomics.org/plink/1.9/) documentation to obtain such files from other formats, including VCF formats 
 
 
 ### Output 
