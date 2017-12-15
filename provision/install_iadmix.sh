@@ -50,3 +50,4 @@ rm hapmap3.8populations.hg19.txt.zip
 ###  of the 1000 Genomes Project
 cd /opt/ancestry
 wget "https://ndownloader.figshare.com/files/10001002" -O 1000Gphase3.5superpopulations.hg19.tsv.gz
+tabix -p vcf 1000Gphase3.5superpopulations.hg19.tsv.gz
