@@ -3,8 +3,8 @@
 
 #-----------------------------------------------------------------------------
 #  File name   : install_iadmix.sh
-#  Author      : Jihoon Kim (j5kim@ucsd.edu)
-#  Date        : 12/5/2017
+#  Author      : Jihoon Kim (j5kim@ucsd.edu), Olivier Harismendy
+#  Date        : 12/14/2017
 #  Description : Install iAdmix to calculate population allele frequency
 #                for an input vcf-format file.
 #-----------------------------------------------------------------------------
@@ -49,6 +49,4 @@ rm hapmap3.8populations.hg19.txt.zip
 ### download resource data, the population allele frequencies for common SNPs
 ###  of the 1000 Genomes Project
 cd /opt/ancestry
-wget "https://ndownloader.figshare.com/files/9920560" -O 1000Gphase3.5superpopulations.hg19.txt.zip
-unzip 1000Gphase3.5superpopulations.hg19.txt.zip
-rm 1000Gphase3.5superpopulations.hg19.txt.zip
+wget "https://ndownloader.figshare.com/files/10001002" -O 1000Gphase3.5superpopulations.hg19.tsv.gz
