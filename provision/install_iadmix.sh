@@ -15,7 +15,7 @@ apt-get update -y
 ### install dependent packages
 apt-get install -y autoconf build-essential curl gcc-multilib git g++ \
  libbz2-dev liblzma-dev libncurses5-dev libssl-dev libz-dev make pkg-config  \
- software-properties-common python wget zip zlibc zlib1g zlib1g-dev 
+ software-properties-common python wget zip zlibc zlib1g zlib1g-dev tabix
 
 ### install iADMIX to compute population allele frequencies
 cd /opt 
