@@ -12,7 +12,7 @@ Input files are genotypes in plink text format (cohortname.ped and cohortname.ma
 ### Output 
 the analysis produces two file names after the input file
 * output_cohortname.txt provides the admixture level of each subject for each reference population
-* output_summary_cohortname.txt provides the cohort-wide cumulative admizture fraction as well as the diversity score. 
+* output_summary_cohortname.txt provides the cohort-wide cumulative admixture fraction as well as the diversity score. 
 
 
 ### Example Input Data
