@@ -50,3 +50,5 @@ export MY_LOCAL_DIR="/usr/john/mydata"
 docker run -d -v ${MY_LOCAL_DIR}:/results j5kim/datamed-admixture:latest bash /opt/DataMed-Admixture/scripts/run_hapmap3.sh /results/cohortname
 ```
 
+### DOI
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1119073.svg)](https://doi.org/10.5281/zenodo.1119073)
