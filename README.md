@@ -16,7 +16,7 @@ the analysis produces two file names after the input file
 
 
 ### Example Input Data
-In order to test the analysis we provide an accessory scripts 'prepare_example.sh', which downloads a public datasets and reformats it to plink ped and map format
+In order to test the analysis we provide an accessory script 'prepare_example.sh', which downloads a public datasets and reformats it to plink ped and map format
 
 Rankinen et al. PLoS One 2016
 - No Evidence of a Common DNA Variant Profile Specific to World Class Endurance Athletes
@@ -35,7 +35,6 @@ docker run -d -v ${MY_LOCAL_DIR}:/results j5kim/datamed-admixture:latest bash /o
 ```
 
 #### Run the example analysis
-
 call hapmap3 based admixture on the example data by executing the following commands. 
 
 ```bash
@@ -44,7 +43,6 @@ docker run -d -v ${MY_LOCAL_DIR}:/results j5kim/datamed-admixture:latest bash /o
 Above run is success if you see the 2 files output.rankinen.txt and output_summary_rankinen.txt
 
 ### Run
-
 Provide your data in plink (cohortname.ped and cohortname.map) format and run the following command to call admixture and diversity score from the Hapmap3 reference. 
 
 ```bash
