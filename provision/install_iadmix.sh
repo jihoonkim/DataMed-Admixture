@@ -49,5 +49,5 @@ rm hapmap3.8populations.hg19.txt.zip
 ### download resource data, the population allele frequencies for common SNPs
 ###  of the 1000 Genomes Project
 cd /opt/ancestry
-wget "https://ndownloader.figshare.com/files/10001002" -O 1000Gphase3.5superpopulations.hg19.tsv.gz
+wget "https://ndownloader.figshare.com/files/11070911" -O 1000Gphase3.5superpopulations.hg19.tsv.gz
 tabix -p vcf 1000Gphase3.5superpopulations.hg19.tsv.gz
