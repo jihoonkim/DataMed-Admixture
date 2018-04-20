@@ -47,7 +47,13 @@ unzip hapmap3.8populations.hg19.txt.zip
 rm hapmap3.8populations.hg19.txt.zip
 
 ### download resource data, the population allele frequencies for common SNPs
-###  of the 1000 Genomes Project
+###  of the 1000 Genomes Project with LD-based SNP pruning
 cd /opt/ancestry
-wget "https://ndownloader.figshare.com/files/11070911" -O 1000Gphase3.5superpopulations.hg19.tsv.gz
-tabix -p vcf 1000Gphase3.5superpopulations.hg19.tsv.gz
+wget "https://ndownloader.figshare.com/files/6163838" -O 1000Gphase3.5superpopulations.hg19.withLDpruning.txt.gz
+tabix -p vcf 1000Gphase3.5superpopulations.hg19.withLDpruning.txt.gz
+
+### download resource data, the population allele frequencies for common SNPs
+###  of the 1000 Genomes Project without LD-based SNP pruning
+cd /opt/ancestry
+wget "https://ndownloader.figshare.com/files/6163865" -O 1000Gphase3.5superpopulations.hg19.withoutLDpruning.txt.gz
+tabix -p vcf 1000Gphase3.5superpopulations.hg19.withoutLDpruning.txt.gz
