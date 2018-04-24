@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #-----------------------------------------------------------------------------
-#  File name   : run_1000g.sh
+#  File name   : run_1000g_withoutLDpruning.sh
 #  Author      : Olivier Harismendy (oharismendy@ucsd.edu)
 #  Date        : 12/14/2017
 #  Description : run input data with 1KG superpopulations as a reference
@@ -10,7 +10,7 @@
 ### set run parameters
 export OUTPUT_DIR=/results 
 export iADMIX_DIR=/opt/ancestry
-export RESOURCE_DATA=${iADMIX_DIR}/1000Gphase3.5superpopulations.hg19.withoutLDpruning.txt.gz
+export RESOURCE_DATA=${iADMIX_DIR}/1000Gphase3.5superpopulations.hg19.withoutLDpruning.tsv.gz
 export INPUT_DATA=$1
 
 ### slices the reference
@@ -41,5 +41,3 @@ Rscript /opt/DataMed-Admixture/scripts/getDivScore.R ${OUTPUT_DIR}/output_${name
 
 ### cleaning up
 rm -rf ${OUTPUT_DIR}/${name}* 
-
-

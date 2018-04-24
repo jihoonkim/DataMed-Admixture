@@ -1,21 +1,18 @@
 #!/bin/bash
 
 #-----------------------------------------------------------------------------
-#  File name   : run_1000g.sh
+#  File name   : run_1000g_withLDpruning.sh
 #  Author      : Olivier Harismendy (oharismendy@ucsd.edu)
-#  Date        : 12/14/2017
+#  Date        : 4/23/2018
 #  Description : run input data with 1KG superpopulations as a reference
 #----------------------------------------------------------------------------
 
 ### set run parameters
 export OUTPUT_DIR=/results 
 export iADMIX_DIR=/opt/ancestry
-export RESOURCE_DATA=${iADMIX_DIR}/1000Gphase3.5superpopulations.hg19.withLDpruning.txt.gz
+export RESOURCE_DATA=${iADMIX_DIR}/1000Gphase3.5superpopulations.hg19.withLDpruning.txt
 export INPUT_DATA=$1
 
-### slices the reference
-zcat ${RESOURCE_DATA} | head -n 1 | sed 's/\t/ /g' > ${iADMIX_DIR}/slice.txt
-awk '{print $1,$4}' ${INPUT_DATA}.map | sort -k1,1n -k2,2n | tabix -T - ${RESOURCE_DATA} | sed 's/\t/ /g' >> ${iADMIX_DIR}/slice.txt
 
 ### create an output directory if not exists
 mkdir -p ${OUTPUT_DIR}
@@ -24,7 +21,7 @@ mkdir -p ${OUTPUT_DIR}
 name=`basename ${INPUT_DATA}`
 
 ### estimate the global admixture proportion of known reference populations
-python ${iADMIX_DIR}/runancestry.py  --freq=${iADMIX_DIR}/slice.txt --cores=2 \
+python ${iADMIX_DIR}/runancestry.py  --freq=${RESOURCE_DATA} --cores=2 \
     --path=${iADMIX_DIR} --plink=${INPUT_DATA} \
     --out=${OUTPUT_DIR}/${name}
 
@@ -41,5 +38,4 @@ Rscript /opt/DataMed-Admixture/scripts/getDivScore.R ${OUTPUT_DIR}/output_${name
 
 ### cleaning up
 rm -rf ${OUTPUT_DIR}/${name}* 
-
 

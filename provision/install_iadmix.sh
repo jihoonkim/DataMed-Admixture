@@ -46,12 +46,17 @@ wget "https://ndownloader.figshare.com/files/9920605" -O hapmap3.8populations.hg
 unzip hapmap3.8populations.hg19.txt.zip
 rm hapmap3.8populations.hg19.txt.zip
 
-### download resource data, the population allele frequencies for common SNPs
-###  of the 1000 Genomes Project with LD-based SNP pruning
-cd /opt/ancestry
-wget "https://ndownloader.figshare.com/files/11144816" -O 1000Gphase3.5superpopulations.hg19.withLDpruning.txt.gz
 
 ### download resource data, the population allele frequencies for common SNPs
 ###  of the 1000 Genomes Project without LD-based SNP pruning
 cd /opt/ancestry
-wget "https://ndownloader.figshare.com/files/11144948" -O 1000Gphase3.5superpopulations.hg19.withoutLDpruning.txt.gz
+wget "https://ndownloader.figshare.com/files/11173319" -O 1000Gphase3.5superpopulations.hg19.withoutLDpruning.tsv.gz
+tabix -p vcf 1000Gphase3.5superpopulations.hg19.withoutLDpruning.tsv.gz
+
+
+### download resource data, the population allele frequencies for common SNPs
+###  of the 1000 Genomes Project with LD-based SNP pruning
+cd /opt/ancestry
+wget "https://ndownloader.figshare.com/files/11144816" -O 1000Gphase3.5superpopulations.hg19.withLDpruning.txt.gz
+gunzip 1000Gphase3.5superpopulations.hg19.withLDpruning.txt.gz
+
