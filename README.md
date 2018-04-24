@@ -2,28 +2,28 @@
 DataMed Admixture
 
 
-### Installation and Preparation
+## Installation and Preparation
 
-#### Install Docker
+### Install Docker
 Download and install [Docker community edition](https://www.docker.com/community-edition)
 
-#### Input Information
+### Input Information
 Input files are genotypes in plink text format (cohortname.ped and cohortname.map) and mapped to GRCh37 human reference genome (no "chr" in chromsome ID). Please refer to [plink](http://zzz.bwh.harvard.edu/plink/) or [plink 1.9](https://www.cog-genomics.org/plink/1.9/) documentation to obtain such files from other formats, including VCF formats 
 
-#### Output Information
+### Output Information
 the analysis produces two file names after the input file
 * output_cohortname.txt provides the admixture level of each subject for each reference population
 * output_summary_cohortname.txt provides the cohort-wide cumulative admixture fraction as well as the diversity score. 
 
-#### Reference populations
+### Reference populations
 The admixture and diversity scores can be calculated from 2 reference cohorts: HapMap3 (8 population) and 1000G (5 continental super-population) and we provide 3 possible scripts to do so
 * run_hapmap3.sh: using HapMap3 cohort. 
 * run_1000g_withLDpruning.sh: using pruned version of 1000G cohort: ideal for dense genotypes, such as whole genome, or genotyping arrays
 * run_1000g_withoutLDpruning.sh: using unpruned version of 1000G cohort: ideal for small targeted genotypes (RNA-Seq, ChIP-Seq, Exomes) 
 
-### Testing
+## Testing
 
-#### Test data
+### Test data
 In order to test the analysis we provide an accessory script 'prepare_example.sh', which downloads a public datasets and reformats it to plink ped and map format
 
 Rankinen et al. PLoS One 2016
@@ -31,25 +31,25 @@ Rankinen et al. PLoS One 2016
 - [Article on PubMed](https://www.ncbi.nlm.nih.gov/pubmed/26824906)
 - [Data on Figshare](https://figshare.com/articles/GAMES_discovery_data_sets/1619893)
 
-#### Test run
+### Test run
 Commands to run an example run with a published data.
 Set the absolute path of your own local directory, where output will be created.
 
-##### Download and prepare test data
+#### Download and prepare test data
 run the following set of commands to download the example data and convert them in your 'mydata' directory
 ```bash
 export MY_LOCAL_DIR="/usr/john/mydata"
 docker run -d -v ${MY_LOCAL_DIR}:/results j5kim/datamed-admixture:latest bash /opt/DataMed-Admixture/example/prepare_example.sh
 ```
 
-##### Run the test analysis
+#### Run the test analysis
 call hapmap3 based admixture on the test data by executing the following commands. 
 ```bash
 docker run -d -v ${MY_LOCAL_DIR}:/results j5kim/datamed-admixture:latest bash /opt/DataMed-Admixture/scripts/run_hapmap3.sh /results/rankinen
 ```
 Above run is success if you see the 2 files output.rankinen.txt and output_summary_rankinen.txt
 
-### Run
+## Run
 Provide your data in plink (cohortname.ped and cohortname.map) format and run the following command to call admixture and diversity score from the Hapmap3 reference. 
 
 ```bash
@@ -62,5 +62,5 @@ export MY_LOCAL_DIR="/usr/john/mydata"
 docker run -d -v ${MY_LOCAL_DIR}:/results j5kim/datamed-admixture:latest bash /opt/DataMed-Admixture/scripts/run_1000g_withoutLDpruning.sh /results/cohortname
 ```
 
-### DOI
+## DOI
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1119073.svg)](https://doi.org/10.5281/zenodo.1119073)
