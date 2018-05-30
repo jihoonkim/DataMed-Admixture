@@ -27,7 +27,7 @@ python ${iADMIX_DIR}/runancestry.py  --freq=${RESOURCE_DATA} --cores=2 \
 
 ### aggregate individual estimates into a single output file
 echo  -ne "reference sample " > ${OUTPUT_DIR}/output_${name}.txt
-head -n 1 ${iADMIX_DIR}/slice.txt | cut -d ' ' -f 6-  >>  ${OUTPUT_DIR}/output_${name}.txt
+head -n 1 1000Gphase3.5superpopulations.hg19.withLDpruning.txt | cut -d ' ' -f 6-  >>  ${OUTPUT_DIR}/output_${name}.txt
 grep -w "final maxval" ${OUTPUT_DIR}/*.input.ancestry | \
   awk -F ':' '{split($1,a,"."); print a[1],a[2], $3,$4,$5,$6,$7}' | \
   cut -d ' ' -f1,2,3,5,7,9,11  >> ${OUTPUT_DIR}/output_${name}.txt
