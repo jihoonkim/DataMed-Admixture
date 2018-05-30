@@ -24,7 +24,7 @@ mkdir -p ${OUTPUT_DIR}
 name=`basename ${INPUT_DATA}`
 
 ### estimate the global admixture proportion of known reference populations
-python ${iADMIX_DIR}/runancestry.py  --freq=${iADMIX_DIR}/slice.txt --cores=2 \
+python ${iADMIX_DIR}/runancestry.py  --freq=${iADMIX_DIR}/slice.txt \
     --path=${iADMIX_DIR} --plink=${INPUT_DATA} \
     --out=${OUTPUT_DIR}/${name}
 
