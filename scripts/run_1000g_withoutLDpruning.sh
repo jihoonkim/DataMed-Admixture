@@ -40,4 +40,5 @@ grep -w "final maxval" ${OUTPUT_DIR}/*.input.ancestry | \
 Rscript /opt/DataMed-Admixture/scripts/getDivScore.R ${OUTPUT_DIR}/output_${name}.txt > ${OUTPUT_DIR}/output_summary_${name}.txt 2>${OUTPUT_DIR}/R.log
 
 ### cleaning up
-rm -rf ${OUTPUT_DIR}/${name}* 
+rm -rf ${OUTPUT_DIR}/${name}*.input
+rm -rf ${OUTPUT_DIR}/${name}*.input.ancestry
